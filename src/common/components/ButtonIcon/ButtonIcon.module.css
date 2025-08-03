@@ -1,0 +1,30 @@
+
+.button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 26px;
+  height: 26px;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-duration: 0.3ms;
+}
+
+.button:active {
+  transform: scale(0.96);
+}
+
+.button > svg {
+  fill: #333;
+}
+
+.button:hover > svg {
+  fill: #683EBD;
+}
+
+.isActive > svg {
+  fill: #683EBD;
+}
