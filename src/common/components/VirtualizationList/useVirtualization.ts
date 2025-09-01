@@ -40,9 +40,7 @@ export const useVirtualization = <T>({
   }, []);
 
   const range = useMemo(() => {
-    const scrollElement = ref.current;
-
-    const rangeStart = scrollElement?.scrollTop || 0;
+    const rangeStart = scrollTop || 0;
     const rangeEnd = rangeStart + wrapperHeight;
 
     const start = Math.floor(rangeStart / itemHeight);
@@ -61,5 +59,5 @@ export const useVirtualization = <T>({
     }));
   }, [range.startIndex, range.endIndex, totalItems]);
 
-  return [virtualizationList, scrollTop] as const;
+  return [virtualizationList] as const;
 };
